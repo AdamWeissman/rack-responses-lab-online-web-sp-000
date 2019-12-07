@@ -5,7 +5,11 @@ class Application
     
     less_than_12 = Time.now.hour < 12
     
-    (less_than_12)? resp.write "Good Morning!" : resp.write "Good Afternoon!"
+    less_than_12 ? write_it("Good Morning!") : write_it("Good Afternoon!")
+    
+    def write_it(something)
+      resp.write #{something}
+    end
  
  
     #current_time = Time.now
