@@ -8,7 +8,7 @@ class Application
     less_than_12 ? write_it("Good Morning!") : write_it("Good Afternoon!")
     
     def write_it(something)
-      resp.write #{something}
+      resp.write something
     end
  
  
