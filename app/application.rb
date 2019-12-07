@@ -3,11 +3,11 @@ class Application
   def call(env)
     resp = Rack::Response.new
     
-    less_than_12 = Time.now.hour < 12
+    #less_than_12 = Time.now.hour < 12
     
-    lemme_find_out = -> {less_than_12 ? "Good Morning!" : "Good Afternoon!"}
+    lemme_find_out = -> {Time.now.hour < 12 ? "Good Morning!" : "Good Afternoon!"}
     
-    resp.write lemme_find_out
+    resp.write lemme_find_out.call
     
     #def write_it(something)
     #  resp.write something
