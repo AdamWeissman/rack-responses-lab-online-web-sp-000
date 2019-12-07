@@ -5,7 +5,9 @@ class Application
     
     less_than_12 = Time.now.hour < 12
     
-    less_than_12 ? resp.write "Good Morning!" : resp.write "Good Afternoon!"
+    lemme_find_out = lambda {less_than_12 ? resp.write "Good Morning!" : resp.write "Good Afternoon!"}
+    
+    lemme_find_out
     
     #def write_it(something)
     #  resp.write something
