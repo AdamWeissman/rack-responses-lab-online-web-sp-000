@@ -7,7 +7,7 @@ class Application
     
     lemme_find_out = -> {less_than_12 ? resp.write "Good Morning!" : resp.write "Good Afternoon!"}
     
-    lemme_find_out
+    lemme_find_out.call
     
     #def write_it(something)
     #  resp.write something
