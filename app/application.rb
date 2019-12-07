@@ -9,7 +9,7 @@ class Application
     
     #resp.write lemme_find_out.call
     
-    resp.write {Time.now.hour < 12 ? "Good Morning!" : "Good Afternoon!"}
+    resp.write "#{Time.now.hour < 12 ? "Good Morning!" : "Good Afternoon!"}"
     
     
     #def write_it(something)
